@@ -11,17 +11,31 @@
     <title>Index</title>
   </head>
   <body>
-  ```
   여기는 index 입니다.
-  ```
-  <form class="login" method="get">
-    ID: <input type="text" placeholder="아이디를 입력하세요."><br>
-    PW: <input type="text" placeholder="비밀번호를 입력하세요.">
-    <button type="submit" onclick="login(form)">로그인</button>
+
+  <form action="goLogin" method="post">
+    ID: <input type="text" class="id" placeholder="아이디를 입력하세요."><br>
+    PW: <input type="text" class="pw" placeholder="비밀번호를 입력하세요.">
+    <input type="submit" value="로그인">
   </form>
-  <a href="goMain">처음이신가요?<button>회원가입</button></a>
+
+<%--  --%>
+  <a href="goJoin">처음이신가요?<button>회원가입</button></a>
+
+<%--  <form class="usrLoginForm" name="usrLoginForm" id="usrLoginForm" action="loginProM" method="post">&ndash;%&gt;--%>
+    <%--    <label class="form-label-outside">아이디</label>--%>
+    <%--    <input class="form-input form-control-has-validation form-control-last-child" type="text" id="id" name="id" placeholder="영문(대소문자) 또는 숫자 4~12자리 조합">--%>
+    <%--    <span id="idCheck"></span>--%>
+    <%--    <br>--%>
+
+    <%--    <label class="form-label-outside">비밀번호</label>--%>
+    <%--    <input class="form-input form-control-has-validation form-control-last-child" type="password" id="pw" name="pw" placeholder="영문(대소문자) 또는 숫자 4~12자리 조합">--%>
+    <%--    <span id="pwCheck"></span>--%>
+    <%--    <br >--%>
 
 
+    <%--    <input type="submit" value="sign in" id="btn">--%>
+<%--  </form>
   <script src="js/log.js"></script>
   </body>
 </html>
