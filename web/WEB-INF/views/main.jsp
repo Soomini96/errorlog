@@ -10,5 +10,6 @@
 </head>
 <body>
     <h1>여기는 Main 입니다.</h1>
+    <button onclick="location.href='goTetris'">테트리스</button>
 </body>
 </html>

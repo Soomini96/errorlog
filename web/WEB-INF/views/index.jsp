@@ -14,13 +14,14 @@
   여기는 index 입니다.
 
   <form action="goLogin" method="post">
-    ID: <input type="text" class="id" placeholder="아이디를 입력하세요."><br>
-    PW: <input type="text" class="pw" placeholder="비밀번호를 입력하세요.">
+    ID: <input type="text" name="id" placeholder="아이디를 입력하세요."><br>
+    PW: <input type="text" name="pw" placeholder="비밀번호를 입력하세요.">
     <input type="submit" value="로그인">
   </form>
 
 <%--  --%>
-  <a href="goJoin">처음이신가요?<button>회원가입</button></a>
+  <a href="goJoin">처음이신가요?<button>회원가입</button></a><br>
+  <button onclick="location.href='goMain'">메인으로</button>
 
 <%--  <form class="usrLoginForm" name="usrLoginForm" id="usrLoginForm" action="loginProM" method="post">&ndash;%&gt;--%>
     <%--    <label class="form-label-outside">아이디</label>--%>
@@ -35,7 +36,7 @@
 
 
     <%--    <input type="submit" value="sign in" id="btn">--%>
-<%--  </form>
-  <script src="js/log.js"></script>
+<%--  </form> --%>
+  <script src="static/js/log.js"></script>
   </body>
 </html>

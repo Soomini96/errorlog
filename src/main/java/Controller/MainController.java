@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.io.IOException;
-import java.util.Map;
 
 @Controller
 public class MainController {
@@ -24,6 +22,10 @@ public class MainController {
     @GetMapping("/goJoin")
     public String goJoin(){
         return "user/join";
+    }
+    @GetMapping("/goTetris")
+    public String goTetris(){
+        return "game/tetris";
     }
 //    @PostMapping("/goLogin")
 //    public String goLogin(HttpServletRequest request){
