@@ -6,8 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import service.MemberServiceImpl;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.sql.Connection;
 
@@ -45,27 +48,30 @@ public class MainController {
     public String goTetris(){
         return "game/tetris";
     }
-//    @PostMapping("/goLogin")
-//    public String goLogin(HttpServletRequest request){
-//        System.out.println();
-////        return userController.checkLogin(data, request, response);
-//    }
-//    @PostMapping("/goLogin")
-//    public String goLogin(@RequestParam Map<String, String> data, HttpServletRequest request, HttpServletResponse response) throws IOException {
-//        return userController.checkLogin(data, request, response);
-//    }
 
+    @PostMapping("/goLogin") // 비회원일시 alert창 뜨게! 추가하기
+    public String goLogin(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        String log = (String) request.getParameter("id");
+        MemberDto dto = memberService.selectMember(log);
 
-    // MyBatis Test용 메서드
-    @GetMapping("/login/{id}")
-    public String loginTestResult(@PathVariable String id, Model model){
-        MemberDto dto = memberService.selectMember(id);
-
-        System.out.println("id: " + id);
-        System.out.println("dto: " + dto.getId());
-
-        model.addAttribute("member", dto);
-
+        System.out.println("log:"+log);
+        session.setAttribute("log", dto);
+//        return "main";
         return "view";
     }
+
+//    // MyBatis Test용 메서드
+//    @GetMapping("/login/{id}")
+//    public String loginTestResult(@PathVariable String id, Model model){
+////        System.out.println("아이디:"+id);
+//        MemberDto dto = memberService.selectMember(id);
+//
+//        System.out.println("id: " + id);
+//        System.out.println("dto: " + dto.getId());
+//
+//        model.addAttribute("member", dto);
+//
+//        return "view";
+//    }
 }

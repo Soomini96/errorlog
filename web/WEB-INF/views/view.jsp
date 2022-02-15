@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -6,7 +6,9 @@
     <title>view</title>
 </head>
 <body>
-id: ${member.id}
-name : ${member.name}
+<c:set var="user_id" value="${sessionScope.log.id}"/>
+id: ${user_id}<br>
+id: ${log.id}<br>
+name : ${log.name}<br>
 </body>
 </html>

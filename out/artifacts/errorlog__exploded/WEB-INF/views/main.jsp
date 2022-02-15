@@ -10,6 +10,10 @@
     <title>Main</title>
 </head>
 <body>
+<%
+    String log = (String)session.getAttribute("log");
+%>
+<h2><%=log%></h2>
     <h1>여기는 Main 입니다.</h1>
     <button onclick="location.href='goTetris'">테트리스</button>
 </body>

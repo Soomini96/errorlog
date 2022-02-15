@@ -5,6 +5,7 @@
   Time: 1:50 AM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
@@ -14,8 +15,8 @@
   여기는 index 입니다.
 
   <form action="goLogin" method="post">
-    ID: <input type="text" name="id" placeholder="아이디를 입력하세요."><br>
-    PW: <input type="text" name="pw" placeholder="비밀번호를 입력하세요.">
+    ID: <input type="text" name="id" placeholder="아이디를 입력하세요"><br>
+    PW: <input type="text" name="pw" placeholder="비밀번호를 입력하세요">
     <input type="submit" value="로그인">
   </form>
 
