@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.FeedMapper">
+
+    <insert id="writeFeed" parameterType="feedDto">
+        INSERT INTO feed(user_id,imagefile,content) VALUES (#{feedDto.user_id} #{feedDto.imagefile} #{feedDto.content})
+    </insert>
+
+    <resultMap type="dto.FeedDto" id="feedDto">
+        <id column="no" property="no"/>
+        <result column="user_id" property="user_id"/>
+        <result column="imagefile" property="imagefile"/>
+        <result column="content" property="content"/>
+        <result column="likes" property="likes"/>
+        <result column="bookmark" property="bookmark"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="modified_at" property="modifiedAt"/>
+    </resultMap>
+
+</mapper>

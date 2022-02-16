@@ -11,6 +11,7 @@
     <!-- db.properties => db연동 정보가 있는 파일 연결 -->
     <context:property-placeholder location="classpath:mybatis/db.properties"/>
 
+
     <!-- 연동된 후 키라고 해야하는 정보를 ${요기} 넣어주기 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>

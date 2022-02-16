@@ -49,6 +49,12 @@ public class MainController {
         return "main";
     }
 
+
+    @GetMapping("/goWriteFeed")
+    public String goWriteFeed(){
+        return "feed/write";
+    }
+
     @GetMapping("/goJoin")
     public String goJoin(){
         return "user/join";

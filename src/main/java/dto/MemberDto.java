@@ -3,6 +3,7 @@ package dto;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+
 public class MemberDto implements Serializable {
 
     private int no;

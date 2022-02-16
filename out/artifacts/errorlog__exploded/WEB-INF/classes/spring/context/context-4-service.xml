@@ -6,4 +6,9 @@
     <bean id="memberService" class="service.MemberServiceImpl">
         <property name="memberDao" ref="memberDao"/>
     </bean>
+
+    <bean id="feedService" class="service.FeedServiceImpl">
+        <property name="feedDao" ref="feedDao"/>
+    </bean>
+
 </beans>
