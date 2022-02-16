@@ -8,4 +8,8 @@
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
 
+    <bean id="feedDao" class="dao.FeedDao">
+        <property name="sqlSession" ref="sqlSession"/>
+    </bean>
+
 </beans>

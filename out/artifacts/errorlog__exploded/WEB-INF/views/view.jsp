@@ -10,5 +10,7 @@
 id: ${user_id}<br>
 id: ${log.id}<br>
 name : ${log.name}<br>
+
+<a href="/goWriteFeed">글쓰기</a>
 </body>
 </html>
