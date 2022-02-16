@@ -7,5 +7,7 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="memberDto" type="dto.MemberDto"/>
+        <typeAlias alias="feedDto" type="dto.FeedDto"/>
     </typeAliases>
+
 </configuration>
