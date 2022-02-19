@@ -3,8 +3,9 @@ package dao;
 import dto.MemberDto;
 import mapper.MemberMapper;
 import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public class MemberDao {
@@ -15,13 +16,38 @@ public class MemberDao {
         this.sqlSession = sqlSession;
     }
 
-    public MemberDto selectMember(final String id){
-        System.out.println("InDAO!!");
-        MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
+    public int joinMember(final MemberDto memberDto){
+        MemberMapper mapper = this.sqlSession.getMapper(MemberMapper.class);
+        return mapper.joinMember(memberDto);  // 성공시 1 반환
+    }
 
-        MemberDto memberDto = mapper.selectMember(id);
-        System.out.println("hi1");
+    public MemberDto selectMemberById(final String id){
+        MemberMapper mapper = this.sqlSession.getMapper(MemberMapper.class);
+        return mapper.selectMemberById(id);
+    }
+    public MemberDto selectMemberByNo(final int no){
+        MemberMapper mapper = this.sqlSession.getMapper(MemberMapper.class);
+        return mapper.selectMemberByNo(no);
+    }
 
-        return  memberDto;
+    public List<MemberDto> selectMembers(){
+        MemberMapper mapper = this.sqlSession.getMapper(MemberMapper.class);
+        return mapper.selectMembers();
+    }
+
+
+    public int updateMember(final MemberDto memberDto){
+        MemberMapper mapper = this.sqlSession.getMapper(MemberMapper.class);
+        return mapper.updateMember(memberDto); // 업데이트 한 행의 개수 반환
+    }
+
+    public int deleteMemberByNo(final int no){
+        MemberMapper mapper = this.sqlSession.getMapper(MemberMapper.class);
+        return mapper.deleteMemberByNo(no); // 삭제 한 행의 개수 반환
+    }
+
+    public int deleteMemberById(final String id){
+        MemberMapper mapper = this.sqlSession.getMapper(MemberMapper.class);
+        return mapper.deleteMemberById(id); // 삭제 한 행의 개수 반환
     }
 }

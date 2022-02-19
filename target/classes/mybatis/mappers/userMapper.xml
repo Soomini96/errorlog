@@ -5,21 +5,45 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.MemberMapper">
 
-    <select id="selectMember" parameterType="String" resultMap="memberDto">
-        SELECT * from users WHERE id = #{id}
-    </select>
-
-    <resultMap type="dto.MemberDto" id="memberDto">
+    <resultMap id="memberDtoResultMap" type="dto.MemberDto" >
         <id column="no" property="no"/>
         <result column="id" property="id"/>
         <result column="pw" property="pw"/>
         <result column="name" property="name"/>
         <result column="phone" property="phone"/>
-        <result column="email" property="email"/>
         <result column="imagefile" property="imagefile"/>
+        <result column="email" property="email"/>
         <result column="info" property="info"/>
         <result column="created_at" property="createdAt"/>
         <result column="modified_at" property="modifiedAt"/>
     </resultMap>
+
+    <insert id="joinMember" parameterType="memberDto">
+        INSERT INTO users(id, pw, name, phone, email, imagefile, info) VALUES (#{id}, #{pw}, #{name}, #{phone}, #{email}, #{imagefile}, #{info})
+    </insert>
+
+    <select id="selectMembers" resultType="memberDto">
+        SELECT * FROM users ORDER BY no
+    </select>
+
+    <select id="selectMemberByNo" parameterType="Integer" resultType="memberDto">
+        SELECT * FROM users WHERE no = #{no}
+    </select>
+
+    <select id="selectMemberById" parameterType="String" resultType="memberDto">
+        SELECT * FROM users WHERE id = #{id}
+    </select>
+
+    <update id="updateMember" parameterType="memberDto">
+        UPDATE users SET pw = #{pw}, name = #{name}, phone = #{phone}, email = #{email}, imagefile = ${imagefile}, info = ${info} WHERE no = #{no}
+    </update>
+
+    <delete id="deleteMemberByNo" parameterType="int">
+        DELETE FROM users WHERE no = #{no}
+    </delete>
+
+    <delete id="deleteMemberById" parameterType="String">
+        DELETE FROM users WHERE id = #{id}
+    </delete>
 
 </mapper>
