@@ -6,10 +6,10 @@
 <mapper namespace="mapper.FeedMapper">
 
     <insert id="writeFeed" parameterType="feedDto">
-        INSERT INTO feed(user_id,imagefile,content) VALUES (#{feedDto.user_id} #{feedDto.imagefile} #{feedDto.content})
+        INSERT INTO feed(user_id,imagefile,content) VALUES (#{user_id}, #{imagefile}, #{content})
     </insert>
 
-    <resultMap type="dto.FeedDto" id="feedDto">
+    <resultMap type="dto.FeedDto" id="fd">
         <id column="no" property="no"/>
         <result column="user_id" property="user_id"/>
         <result column="imagefile" property="imagefile"/>
