@@ -12,15 +12,14 @@ import javax.swing.text.StyleContext;
 
 @Repository
 public class FeedDao {
+
     private SqlSession sqlSession;
     public void setSqlSession(SqlSessionTemplate sqlSession) {
         this.sqlSession = sqlSession;
     }
 
-    public FeedDto selectMember(final FeedDto feedDto){
+    public int writeFeed(final FeedDto feedDto){
         FeedMapper mapper = sqlSession.getMapper(FeedMapper.class);
-
-        FeedDto result = mapper.writeFeed(feedDto);
-        return  feedDto;
+        return mapper.writeFeed(feedDto);
     }
 }

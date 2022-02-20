@@ -1,15 +1,18 @@
 package dto;
 
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-@Getter
+@NoArgsConstructor
+@Data
 public class FeedDto implements Serializable {
     private int no,likes,bookmark;
     private String user_id,imagefile,content;
-    Timestamp createdAt, modifiedAt;
+    private Timestamp createdAt, modifiedAt;
 
     public FeedDto(int no, String user_id, String imagefile, String content, int likes, int bookmark, Timestamp createdAt, Timestamp modifiedAt) {
         this.no = no;

@@ -13,8 +13,7 @@ public class FeedServiceImpl implements FeedService{
     }
 
     @Override
-    public FeedDto writeFeed(FeedDto feedDto){
-
-        return null;
+    public int writeFeed(FeedDto feedDto){
+        return feedDao.writeFeed(feedDto);
     }
 }

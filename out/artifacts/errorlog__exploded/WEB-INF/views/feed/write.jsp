@@ -6,10 +6,11 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="/feed/write" method="post">
-        <input type="text" value="${log.id}">
-        <input type="file" >
-        <input type="text" placeholder="내용을 입력하세요">
+    <form action="/post/feed" method="post">
+        <input type="text" value="${log.id}" name="id">
+        <%-- <input type="file" >--%>
+        <input type="text" placeholder="파일" name="imagefile">
+        <input type="text" placeholder="내용을 입력하세요" name="content">
         <input type="submit" value="작성하기">
     </form>
 </body>

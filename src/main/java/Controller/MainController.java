@@ -1,5 +1,6 @@
 package Controller;
 
+import dto.FeedDto;
 import dto.MemberDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import service.FeedService;
 import service.MemberService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,9 +25,13 @@ public class MainController {
 
     @Autowired
     private MemberRestController memberRestController;
+    @Autowired
+    private FeedRestController feedRestController;
 
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private FeedService feedService;
 
 
     void jdbcConnectionTest() {
@@ -85,6 +91,18 @@ public class MainController {
         model.addAttribute("memberList", memberList);
         System.out.println("컨트롤러 리!턴!");
         return "viewAllUser";
+    }
+
+    @PostMapping("/post/feed")
+    public String writeFeed(HttpServletRequest request){
+        String id = request.getParameter("id");
+        String imagefile = request.getParameter("imagefile");
+        String content = request.getParameter("content");
+
+        FeedDto feed = new FeedDto(id,imagefile,content);
+        System.out.println(feed);
+        feedRestController.writeFeed(feed);
+        return "view";
     }
 
 //    public String joinMember(String id){
