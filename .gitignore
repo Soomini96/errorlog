@@ -157,4 +157,6 @@
 #.classpath
 #
 ## End of https://www.toptal.com/developers/gitignore/api/java,intellij,maven
+/src/main/resources/mybatis/db.properties
+/target/classes/mybatis/db.properties
 db.properties

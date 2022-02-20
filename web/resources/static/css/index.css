@@ -1,0 +1,48 @@
+body.index {
+    color: white;
+    background: rgba(0, 72, 251);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: white;
+    margin-bottom:20px;
+}
+
+section form {
+    margin-bottom: 20px;
+}
+
+section form div {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+section form div label {
+    width: 10%;
+}
+
+section form div input {
+    width: 55%;
+}
+
+section form .btn {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+section .goJoin {
+    color: white;
+    text-align: center;
+}

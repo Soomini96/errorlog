@@ -5,39 +5,51 @@
   Time: 1:50 AM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Index</title>
-  </head>
-  <body>
-  여기는 index 입니다.
+</head>
+<body class="index">
+<section>
+    <h1>ErrorLog</h1>
+    <h2>로그인 후 서비스를 이용하실 수 있습니다.</h2>
+    <form action="goLogin" method="post">
 
-  <form action="goLogin" method="post">
-    ID: <input type="text" name="id" placeholder="아이디를 입력하세요"><br>
-    PW: <input type="text" name="pw" placeholder="비밀번호를 입력하세요">
-    <input type="submit" value="로그인">
-  </form>
+        <div>
+            <label for="id">ID:</label> <input type="text" name="id" id="id" placeholder="아이디를 입력하세요">
+        </div>
+        <div>
+            <label for="pw">PW:</label> <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요">
+        </div>
+        <input class="btn" type="submit" value="로그인">
+    </form>
+
+    <div class="goJoin">
+        <p>처음이신가요?   <a href="goJoin">회원가입</a></p>
+        <button onclick="location.href='goMain'" style='margin-top:20pxx'>메인으로(임시)</button>
+    </div>
+</section>
 
 <%--  --%>
-  <a href="goJoin">처음이신가요?<button>회원가입</button></a><br>
-  <button onclick="location.href='goMain'">메인으로</button>
 
 <%--  <form class="usrLoginForm" name="usrLoginForm" id="usrLoginForm" action="loginProM" method="post">&ndash;%&gt;--%>
-    <%--    <label class="form-label-outside">아이디</label>--%>
-    <%--    <input class="form-input form-control-has-validation form-control-last-child" type="text" id="id" name="id" placeholder="영문(대소문자) 또는 숫자 4~12자리 조합">--%>
-    <%--    <span id="idCheck"></span>--%>
-    <%--    <br>--%>
+<%--    <label class="form-label-outside">아이디</label>--%>
+<%--    <input class="form-input form-control-has-validation form-control-last-child" type="text" id="id" name="id" placeholder="영문(대소문자) 또는 숫자 4~12자리 조합">--%>
+<%--    <span id="idCheck"></span>--%>
+<%--    <br>--%>
 
-    <%--    <label class="form-label-outside">비밀번호</label>--%>
-    <%--    <input class="form-input form-control-has-validation form-control-last-child" type="password" id="pw" name="pw" placeholder="영문(대소문자) 또는 숫자 4~12자리 조합">--%>
-    <%--    <span id="pwCheck"></span>--%>
-    <%--    <br >--%>
+<%--    <label class="form-label-outside">비밀번호</label>--%>
+<%--    <input class="form-input form-control-has-validation form-control-last-child" type="password" id="pw" name="pw" placeholder="영문(대소문자) 또는 숫자 4~12자리 조합">--%>
+<%--    <span id="pwCheck"></span>--%>
+<%--    <br >--%>
 
 
-    <%--    <input type="submit" value="sign in" id="btn">--%>
+<%--    <input type="submit" value="sign in" id="btn">--%>
 <%--  </form> --%>
-  <script src="static/js/log.js"></script>
-  </body>
+<script src="js/log.js"></script>
+</body>
 </html>
