@@ -11,6 +11,7 @@
 </head>
 <body>
 <h1>여기는 Main 입니다.</h1>
+<%----%>
 <%--<%--%>
 <%--    String log = (String)session.getAttribute("log");--%>
 <%--%>--%>
@@ -21,6 +22,8 @@ id: ${user_id}<br>
 id: ${log}<br>
 
 <a href="/goWriteFeed">글쓰기</a>
+<a href="/goAllFeed">모든 피드보기</a>
+
 <button onclick="location.href='goTetris'">테트리스</button>
 
 </body>

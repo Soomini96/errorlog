@@ -22,6 +22,8 @@ id: ${user_id}<br>
 id: ${log}<br>
 
 <a href="/goWriteFeed">글쓰기</a>
+<a href="/goAllFeed">모든 피드보기</a>
+
 <button onclick="location.href='goTetris'">테트리스</button>
 
 </body>

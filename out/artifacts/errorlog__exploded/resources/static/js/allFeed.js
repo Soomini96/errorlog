@@ -1,20 +1,4 @@
-// 팔로우한 사람 목록
-let follow = [];
-function myfollow(logId){
-    $.ajax({
-        url : '',
-        method : 'get'
-    }).done(res => {
-        follow = res;
-    })
-}
-
 window.onload = function (){
-    // 팔로우한 사람의 피드만 볼 수 있도록
-    const logId = document.getElementById("logId").value;
-    myfollow(logId);
-
-
     $.ajax({
         url : 'v1/feed',
         method : 'get'
@@ -34,9 +18,12 @@ window.onload = function (){
                     const likes = e.likes;
                     const ago = agoTime(e.createdAt);
                     $("table.feed-wrap").append(
-                        `<tr>
-                            <td>${user_id}</td>
-                         </tr>`
+                        `<div class="feed" id="${feed_no}">
+                            <span>이미지${user_image}</span><br>
+                            <span>내용${content}</span><br>
+                            <span>by ${user_id}</span><br>
+                            <span>♥ ${likes}</span><br>
+                         </div>`
                     );
                 }
             });

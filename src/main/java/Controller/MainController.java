@@ -63,6 +63,11 @@ public class MainController {
         return "feed/write";
     }
 
+    @GetMapping("/goAllFeed")
+    public String goAllFeed() {
+        return "feed/allFeed";
+    }
+
     @GetMapping("/goJoin")
     public String goJoin() {
         return "user/join";

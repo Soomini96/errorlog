@@ -1,0 +1,8 @@
+.feed-wrap{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.feed{
+    border: 1px solid;
+}

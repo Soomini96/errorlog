@@ -11,7 +11,7 @@
 </head>
 <body>
     <form action="/post/feed" method="post">
-        <input type="text" value="${log.id}" name="id">
+        <input type="text" value="${log}" name="id">
         <%-- <input type="file" >--%>
         <input type="text" placeholder="파일" name="imagefile">
         <input type="text" placeholder="내용을 입력하세요" name="content">

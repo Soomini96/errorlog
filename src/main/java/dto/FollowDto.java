@@ -1,8 +1,9 @@
 package dto;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class FollowDto {
+public class FollowDto implements Serializable {
     private int no;
     private String user_id,follow_id;
     private Timestamp created_at, modified_at;
