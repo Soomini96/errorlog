@@ -1,3 +1,4 @@
+<%@ page import="org.springframework.web.context.request.SessionScope" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -11,9 +12,10 @@
     <script src="js/allFeed.js"></script>
 </head>
 <body>
+    <input type="hidden" name="logId" id="logId" value="<%=session.getAttribute("log") %>">
     <h3>모든 피드</h3>
-    <main class="feed-wrap">
+    <table class="feed-wrap">
 
-    </main>
+    </table>
 </body>
 </html>

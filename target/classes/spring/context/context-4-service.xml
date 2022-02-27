@@ -11,4 +11,9 @@
         <property name="feedDao" ref="feedDao"/>
     </bean>
 
+    <bean id="followService" class="service.FollowServiceImpl">
+        <property name="followDao" ref="followDao"/>
+    </bean>
+
+
 </beans>

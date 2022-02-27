@@ -10,11 +10,18 @@
     <title>Main</title>
 </head>
 <body>
-<%
-    String log = (String)session.getAttribute("log");
-%>
-<h2><%=log%></h2>
-    <h1>여기는 Main 입니다.</h1>
-    <button onclick="location.href='goTetris'">테트리스</button>
+<h1>여기는 Main 입니다.</h1>
+<%--<%--%>
+<%--    String log = (String)session.getAttribute("log");--%>
+<%--%>--%>
+<%--<h2><%=log%></h2>--%>
+
+<c:set var="user_id" value="${sessionScope.log}"/>
+id: ${user_id}<br>
+id: ${log}<br>
+
+<a href="/goWriteFeed">글쓰기</a>
+<button onclick="location.href='goTetris'">테트리스</button>
+
 </body>
 </html>

@@ -12,8 +12,10 @@ import service.FeedService;
 import service.MemberService;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
+import java.io.IOException;
 import java.sql.Connection;
 import java.util.List;
 
@@ -72,17 +74,8 @@ public class MainController {
     }
 
     @PostMapping("/goLogin") // 비회원일시 alert창 뜨게! 추가하기
-    public String goLogin(HttpServletRequest request, Model model) {
-        HttpSession session = request.getSession();
-        String log = (String) request.getParameter("id");
-        MemberDto dto = memberRestController.selectMemberById(log);
-
-        model.addAttribute("memberModel", dto);
-
-        System.out.println("log:" + log);
-        session.setAttribute("log", dto);
-
-        return "view";
+    public String goLogin(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
+        return memberRestController.goLogin(request, response);
     }
 
     @GetMapping("/all-members")
