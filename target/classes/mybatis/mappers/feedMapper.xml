@@ -9,6 +9,14 @@
         INSERT INTO feed(user_id,imagefile,content) VALUES (#{user_id}, #{imagefile}, #{content})
     </insert>
 
+    <select id="allFeed" resultMap="fd">
+        SELECT * FROM feed;
+    </select>
+
+    <update id="updateFeed" parameterType="feedDto">
+        UPDATE feed SET user_id = #{user_id}, imagefile = #{imagefile}, content = #{content} WHERE no = #{no};
+    </update>
+
     <resultMap type="dto.FeedDto" id="fd">
         <id column="no" property="no"/>
         <result column="user_id" property="user_id"/>

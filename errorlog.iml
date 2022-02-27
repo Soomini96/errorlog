@@ -16,6 +16,7 @@
       <configuration>
         <fileset id="fileset" name="FeedMapper" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/mybatis/mappers/feedMapper.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/mybatis/mappers/FollowMapper.xml</file>
         </fileset>
       </configuration>
     </facet>

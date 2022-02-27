@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 @NoArgsConstructor
-@Data
+@Getter
 public class FeedDto implements Serializable {
     private int no,likes,bookmark;
     private String user_id,imagefile,content;

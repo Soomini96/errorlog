@@ -9,6 +9,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.swing.text.StyleContext;
+import java.util.List;
 
 @Repository
 public class FeedDao {
@@ -21,5 +22,10 @@ public class FeedDao {
     public int writeFeed(final FeedDto feedDto){
         FeedMapper mapper = sqlSession.getMapper(FeedMapper.class);
         return mapper.writeFeed(feedDto);
+    }
+
+    public List<FeedDto> allFeed(){
+        FeedMapper mapper = sqlSession.getMapper(FeedMapper.class);
+        return mapper.allFeed();
     }
 }

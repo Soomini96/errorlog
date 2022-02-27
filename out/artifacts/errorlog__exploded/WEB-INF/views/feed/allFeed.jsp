@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -8,14 +7,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/allFeed.js"></script>
 </head>
 <body>
-    <form action="/post/feed" method="post">
-        <input type="text" value="${log.id}" name="id">
-        <%-- <input type="file" >--%>
-        <input type="text" placeholder="파일" name="imagefile">
-        <input type="text" placeholder="내용을 입력하세요" name="content">
-        <input type="submit" value="작성하기">
-    </form>
+    <h3>모든 피드</h3>
+    <main class="feed-wrap">
+
+    </main>
 </body>
 </html>
