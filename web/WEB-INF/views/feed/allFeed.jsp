@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/allFeed.js"></script>
 </head>
-<body>
+<body>/
     <input type="hidden" name="logId" id="logId" value="<%=session.getAttribute("log") %>">
     <h3>모든 피드</h3>
     <table class="feed-wrap">
