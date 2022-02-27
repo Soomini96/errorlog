@@ -11,6 +11,7 @@
 </head>
 <body>
 <h1>여기는 Main 입니다.</h1>
+<%----%>
 <%--<%--%>
 <%--    String log = (String)session.getAttribute("log");--%>
 <%--%>--%>
