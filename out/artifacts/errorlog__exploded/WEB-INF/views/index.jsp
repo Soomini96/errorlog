@@ -29,8 +29,9 @@
 
     <div class="goJoin">
         <p>처음이신가요?   <a href="goJoin">회원가입</a></p>
-        <button onclick="location.href='goMain'" style='margin-top:20px'>메인으로(임시)</button>
+        <button onclick="location.href='goMain'">메인으로(임시)</button>
     </div>
+    <button onclick="location.href='goMarkdown'">마크다운 편집기(수민)</button>
 </section>
 
 <%--  --%>

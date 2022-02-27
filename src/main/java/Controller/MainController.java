@@ -82,6 +82,10 @@ public class MainController {
     public String goLogin(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
         return memberRestController.goLogin(request, response);
     }
+    @GetMapping("/goMarkdown")
+    public String goMarkdown(){
+        return "user/markdown";
+    }
 
     @GetMapping("/all-members")
     public String selectMembers(Model model) {

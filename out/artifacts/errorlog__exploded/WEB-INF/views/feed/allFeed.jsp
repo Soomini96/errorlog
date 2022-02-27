@@ -12,7 +12,7 @@
     <script src="js/allFeed.js"></script>
     <link rel="stylesheet" type="text/css" href="css/allFeed.css>
 </head>
-<body>
+<body>/
     <input type="hidden" name="logId" id="logId" value="<%=session.getAttribute("log") %>">
     <h3>errorlog</h3>
     <table class="feed-wrap">
