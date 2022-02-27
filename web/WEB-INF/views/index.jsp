@@ -10,7 +10,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
+<%--    <link rel="stylesheet" href="css/index.css">--%>
     <title>Index</title>
 </head>
 <body class="index">
@@ -18,7 +18,6 @@
     <h1>ErrorLog</h1>
     <h2>로그인 후 서비스를 이용하실 수 있습니다.</h2>
     <form action="goLogin" method="post">
-
         <div>
             <label for="id">ID:</label> <input type="text" name="id" id="id" placeholder="아이디를 입력하세요">
         </div>
@@ -30,7 +29,7 @@
 
     <div class="goJoin">
         <p>처음이신가요?   <a href="goJoin">회원가입</a></p>
-        <button onclick="location.href='goMain'" style='margin-top:20pxx'>메인으로(임시)</button>
+        <button onclick="location.href='goMain'" style='margin-top:20px'>메인으로(임시)</button>
     </div>
 </section>
 
@@ -50,6 +49,6 @@
 
 <%--    <input type="submit" value="sign in" id="btn">--%>
 <%--  </form> --%>
-<script src="js/log.js"></script>
+<%--<script src="js/log.js"></script>--%>
 </body>
 </html>
