@@ -1,8 +1,7 @@
-<%@ page import="org.springframework.web.context.request.SessionScope" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,14 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="js/allFeed.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/allFeed.css">
+    <script src="js/Feed.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Feed.css">
 </head>
 <body>
-    <input type="hidden" name="logId" id="logId" value="<%=session.getAttribute("log") %>">
-    <h3>errorlog</h3>
-    <table class="feed-wrap">
+    <h1>글보기</h1>
+<%--    <input type="hidden" value="<%=request.getAttribute("no")%>" id="no">--%>
+    <input type="hidden" value="3" id="no">
+    <div class="feed-wrap">
 
-    </table>
+    </div>
 </body>
 </html>

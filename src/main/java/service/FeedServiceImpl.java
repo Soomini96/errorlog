@@ -23,4 +23,9 @@ public class FeedServiceImpl implements FeedService{
     public List<FeedDto> allFeed() {
         return feedDao.allFeed();
     }
+
+    @Override
+    public FeedDto selectFeedByNo(int no) {
+        return feedDao.selectFeedByNo(no);
+    }
 }

@@ -13,6 +13,10 @@
         SELECT * FROM feed;
     </select>
 
+    <select id="selectFeedById" resultMap="fd" parameterType="Integer">
+        SELECT * FROM feed where no = #{no};
+    </select>
+
     <update id="updateFeed" parameterType="feedDto">
         UPDATE feed SET user_id = #{user_id}, imagefile = #{imagefile}, content = #{content} WHERE no = #{no};
     </update>

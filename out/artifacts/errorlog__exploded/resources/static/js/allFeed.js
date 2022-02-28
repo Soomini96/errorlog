@@ -20,19 +20,35 @@ window.onload = function (){
                     $("table.feed-wrap").append(
                         `<div class="feed" id="${feed_no}">
                             <span>이미지${user_image}</span><br>
-                            <span>내용${content}</span><br>
+                            <span>제목추가하기</span><br>
                             <span>by ${user_id}</span><br>
                             <span>♥ ${likes}</span><br>
                          </div>`
                     );
+                    addEvent();
                 }
             });
 
         });
     });
-}
+};
 
 
 function agoTime(time){
     return time;
+};
+
+function addEvent(){
+    const divFeed = document.getElementsByClassName('feed');
+    for(let i=0;i<divFeed.length;i++){
+        divFeed[i].addEventListener('click', () => {
+            const feedNo = divFeed[i].id;
+            console.log(feedNo);
+            location.href = `/goFeed`
+        });
+
+        divFeed[i].addEventListener('mouseover',() => {
+            $(this).animate({bottom: "30"}, 500)
+        });
+    }
 }
