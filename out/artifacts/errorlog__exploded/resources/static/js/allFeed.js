@@ -44,7 +44,7 @@ function addEvent(){
         divFeed[i].addEventListener('click', () => {
             const feedNo = divFeed[i].id;
             console.log(feedNo);
-            location.href = `/goFeed`
+            location.href = `/goFeed/no=${feedNo}`;
         });
 
         divFeed[i].addEventListener('mouseover',() => {

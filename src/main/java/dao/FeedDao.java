@@ -31,6 +31,6 @@ public class FeedDao {
 
     public FeedDto selectFeedByNo(int no){
         FeedMapper mapper = sqlSession.getMapper(FeedMapper.class);
-        return mapper.selecFeedtByNo(no);
+        return mapper.selectFeedByNo(no);
     }
 }

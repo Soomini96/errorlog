@@ -69,9 +69,9 @@ public class MainController {
         return "feed/allFeed";
     }
 
-    @RequestMapping("/goFeed")
-    public String goFeed(Model model){
-        //model.addAttribute("no",no);
+    @RequestMapping("/goFeed/no={no}")
+    public String goFeed(Model model,@PathVariable int no){
+        model.addAttribute("no",no);
         return "feed/Feed";
     }
 

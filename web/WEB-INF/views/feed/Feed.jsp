@@ -9,15 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="js/Feed.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/Feed.css">
+    <link rel="stylesheet" type="text/css" href="../css/Feed.css">
 </head>
 <body>
     <h1>글보기</h1>
-<%--    <input type="hidden" value="<%=request.getAttribute("no")%>" id="no">--%>
-    <input type="hidden" value="3" id="no">
+    <input type="hidden" value="<%=request.getAttribute("no")%>" id="no">
     <div class="feed-wrap">
-
+        <h1><%=request.getAttribute("no")%></h1>
     </div>
+
+    <script src="../js/Feed.js"></script>
 </body>
 </html>
