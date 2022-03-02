@@ -58,6 +58,11 @@ public class MainController {
         return "main";
     }
 
+    @GetMapping("/goTest") // 마크다운 테스트용
+    public String goTest(){
+        return "user/test";
+    }
+
 
     @GetMapping("/goWriteFeed")
     public String goWriteFeed() {

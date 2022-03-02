@@ -12,11 +12,13 @@
     <title>마크다운 에디터</title>
 </head>
 <body>
+<p>kjdalkf<strong>dfdsaf</strong></p><p><br></p><p><em>ffffff</em></p><div contenteditable="false"><hr></div><blockquote><p>zzzzzz</p></blockquote>
+
     <h1>마크다운 에디터 입니다</h1>
     <div id="editor"></div>
     <button onclick="seeHtml()">html보기</button>
     <button onclick="seeMd()">markdown보기</button>
-    <button onclick="">저장하기</button>
+    <button onclick="location.href=''" id="send">저장하기</button>
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <script>
         const Editor = toastui.Editor;
@@ -34,6 +36,15 @@
         seeMd = function(){
             alert(editor.getMarkdown());
         }
+
+        $(document).ready(function (){
+            $("#send").click(function (){
+                alert("hi");
+                alert("#editor".toString());
+                alert("#editor");
+                alert(editor);
+            })
+        })
     </script>
 </body>
 </html>
