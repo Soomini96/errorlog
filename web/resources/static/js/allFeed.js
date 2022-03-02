@@ -21,7 +21,7 @@ window.onload = function (){
                         `<div class="feed" id="${feed_no}">
                             <span>이미지${user_image}</span><br>
                             <span>제목추가하기</span><br>
-                            <span>by ${user_id}</span><br>
+                            <span>by ${user_id}</span>
                             <span>♥ ${likes}</span><br>
                          </div>`
                     );
