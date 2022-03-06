@@ -14,15 +14,16 @@ window.onload = function (){
                     const user_id = e.user_id;
                     const user_image = user.imagefile;
                     const feed_image = e.imagefile;
-                    const content = e.content;
+                    const content = e.content.substring(0,200);
                     const likes = e.likes;
                     const ago = agoTime(e.createdAt);
                     $("table.feed-wrap").append(
                         `<div class="feed" id="${feed_no}">
-                            <span>이미지${user_image}</span><br>
-                            <span>제목추가하기</span><br>
-                            <span>by ${user_id}</span>
-                            <span>♥ ${likes}</span><br>
+                            <span class="img">이미지${user_image}</span>
+                            <span class="title">제목추가하기</span>
+                            <span class="content">${content}</span>
+                            <span class="writer">by ${user_id}</span>
+                            <span class="likes">♥ ${likes}</span>
                          </div>`
                     );
                     addEvent();
