@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.util.List;
 
@@ -107,8 +108,10 @@ public class MainController {
         return "viewAllUser";
     }
 
-    @PostMapping("/post/feed")
-    public String writeFeed(HttpServletRequest request){
+    @PostMapping("/post-feed")
+    public String writeFeed(HttpServletRequest request) throws UnsupportedEncodingException {
+
+        request.setCharacterEncoding("utf-8");
         String id = request.getParameter("id");
         String imagefile = request.getParameter("imagefile");
         String content = request.getParameter("content");
@@ -116,7 +119,7 @@ public class MainController {
         FeedDto feed = new FeedDto(id,imagefile,content);
         System.out.println(feed);
         feedRestController.writeFeed(feed);
-        return "view";
+        return "feed/allFeed";
     }
 
 //    public String joinMember(String id){

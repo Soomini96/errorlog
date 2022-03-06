@@ -10,8 +10,8 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="/post/feed" method="post">
-        <input type="text" value="${log}" name="id">
+    <form action="/post-feed" method="post">
+        <input type="text" name="id" value="${log}" readonly/></input>
         <%-- <input type="file" >--%>
         <input type="text" placeholder="파일" name="imagefile">
         <input type="text" placeholder="내용을 입력하세요" name="content">
