@@ -5,6 +5,12 @@ window.onload = function (){
         url : `/v1/feed/no=${no}`,
         method : 'get'
     }).done(res => {
+        // 유저가 해당 글에 '좋아요' 눌렀는 지 파악
+        $.ajax({
+
+        }).success(res => {
+
+        })
         const feed_no = res.no;
         const user_id = res.user_id;
         const feed_image = res.imagefile;
