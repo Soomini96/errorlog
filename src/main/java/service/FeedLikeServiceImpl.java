@@ -2,6 +2,7 @@ package service;
 
 import dao.FeedDao;
 import dao.FeedLikeDao;
+import dto.FeedLikeDto;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -13,7 +14,7 @@ public class FeedLikeServiceImpl {
         this.feedLikeDao = feedLikeDao;
     }
 
-    public boolean checkByIdAndNo(Map map){
+    public FeedLikeDto checkByIdAndNo(Map map){
         return feedLikeDao.checkByIdAndNo(map);
     }
 }

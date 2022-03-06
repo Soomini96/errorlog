@@ -1,7 +1,9 @@
 package mapper;
 
+import dto.FeedLikeDto;
+
 import java.util.Map;
 
 public interface FeedLikeMapper {
-    public boolean checkByIdAndNo(Map map);
+    public FeedLikeDto checkByIdAndNo(Map map);
 }

@@ -110,7 +110,6 @@ public class MainController {
 
     @PostMapping("/post-feed")
     public String writeFeed(HttpServletRequest request) throws UnsupportedEncodingException {
-
         request.setCharacterEncoding("utf-8");
         String id = request.getParameter("id");
         String imagefile = request.getParameter("imagefile");
