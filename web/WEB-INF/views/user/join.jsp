@@ -6,11 +6,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/join.css">
     <title>JOIN</title>
 </head>
 <body>
 <div class="wrap">
     <h1>JOIN</h1>
+    <p class="notice">*는 필수입력항목입니다.</p>
     <form>
         <table>
             <tr>

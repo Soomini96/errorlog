@@ -10,7 +10,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/common.css">
-<%--    <link rel="stylesheet" href="css/index.css">--%>
+    <link rel="stylesheet" href="css/index.css">
     <title>Index</title>
 </head>
 <body class="index">

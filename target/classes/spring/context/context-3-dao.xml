@@ -16,4 +16,8 @@
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
 
+    <bean id="feedlikeDao" class="dao.FeedLikeDao">
+        <property name="sqlSession" ref="sqlSession"/>
+    </bean>
+
 </beans>

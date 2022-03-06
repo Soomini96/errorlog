@@ -2,6 +2,9 @@
 
 *{margin:0;padding:0; font-family: 'Gowun Dodum', 'Roboto Mono', sans-serif;}
 
-button, input[type=button], input[type=submit]{background:white; border:1px solid white; padding:8px 10px;cursor:pointer;}
-input[type=text], input[type=password]{padding:8px; border:1px solid white; }
+/* button style*/
+button, input[type=button], input[type=submit]{background:white; border:1px solid #eee; padding:8px 10px;cursor:pointer;}
+
+/* textbox style */
+input[type=text], input[type=password], textarea{padding:8px; border:1px solid #eee; }
 label{padding:8px;}
