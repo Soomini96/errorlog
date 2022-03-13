@@ -17,4 +17,9 @@ public class FeedLikeServiceImpl {
     public FeedLikeDto checkByIdAndNo(Map map){
         return feedLikeDao.checkByIdAndNo(map);
     }
+
+    public void checkLike(FeedLikeDto feedLikeDto){
+        feedLikeDao.checkLike(feedLikeDto);
+    }
+
 }

@@ -1,11 +1,9 @@
 package Controller;
 
+import dto.FeedDto;
 import dto.FeedLikeDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import service.FeedLikeServiceImpl;
 import service.FeedServiceImpl;
 
@@ -23,5 +21,10 @@ public class FeedLikeController {
         map.put("id",id);
         map.put("no",no);
         return feedLikeService.checkByIdAndNo(map);
+    }
+
+    @PostMapping("/v1/feedLike")
+    public void checkLike(@RequestBody FeedLikeDto feedLikeDto){
+        feedLikeService.checkLike(feedLikeDto);
     }
 }

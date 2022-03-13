@@ -18,4 +18,10 @@ public class FeedLikeDao {
         FeedLikeMapper feedLikeMapper = sqlSession.getMapper(FeedLikeMapper.class);
         return feedLikeMapper.checkByIdAndNo(map);
     }
+
+    // 좋아요 클릭
+    public void checkLike(FeedLikeDto feedLikeDto){
+        FeedLikeMapper feedLikeMapper = sqlSession.getMapper(FeedLikeMapper.class);
+        feedLikeMapper.checkLike(feedLikeDto);
+    }
 }

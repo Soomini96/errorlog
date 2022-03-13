@@ -16,7 +16,7 @@
     </bean>
 
     <bean id="feedLikeService" class="service.FeedLikeServiceImpl">
-        <property name="feedLikeDao" ref="feedlikeDao"/>
+        <property name="feedLikeDao" ref="feedLikeDao"/>
     </bean>
 
 

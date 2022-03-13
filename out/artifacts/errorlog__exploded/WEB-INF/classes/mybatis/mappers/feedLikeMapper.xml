@@ -8,6 +8,10 @@
         select * from feed_like where feed_no=#{no} and user_id=#{id};
     </select>
 
+    <insert id="checkLike" parameterType="feedLikeDto">
+        INSERT INTO feed_like(user_id, feed_no) VALUES (#{user_id},#{feed_no});
+    </insert>
+
     <resultMap type="dto.FeedLikeDto" id="fdl">
         <id column="no" property="no"/>
         <result column="user_id" property="user_id"/>

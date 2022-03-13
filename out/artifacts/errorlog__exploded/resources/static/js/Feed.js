@@ -1,3 +1,5 @@
+let user_id = null;
+
 window.onload = function (){
     // 해당 글 불러오기
     const no = document.getElementById("no").value;
@@ -12,7 +14,7 @@ window.onload = function (){
         }).success(like => {
             const myLike = like;
             const feed_no = res.no;
-            const user_id = res.user_id;
+            user_id = res.user_id;
             const feed_image = res.imagefile;
             const content = res.content;
             const likes = res.likes;
@@ -23,7 +25,7 @@ window.onload = function (){
                     ` <span>이미지${feed_image}</span><br>
                     <span>내용${content}</span><br>
                     <span>by ${user_id}</span><br>
-                    <span>♡${likes}개</span>`
+                    <span><a onclick="checkLike(this.id)" id="${feed_no}">♡</a>${likes}개</span>`
                 );
             }else{
                 // 2-2. 사용자가 해당글에 좋아요를 누른 경우
@@ -37,4 +39,20 @@ window.onload = function (){
 
         })
     });
+}
+
+// 좋아요 누르기
+function checkLike(feed_no){
+    $.ajax({
+        url : '/v1/feedLike',
+        method : 'post',
+        contentType: 'application/json;charset=utf-8',
+        data : JSON.stringify({
+            "user_id" : `${user_id}`,
+            "feed_no" : `${feed_no}`
+        })
+    }).done(res => {
+        console.log("좋아요 누름")
+        console.log(res);
+    })
 }
