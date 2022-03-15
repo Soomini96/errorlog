@@ -33,7 +33,7 @@ window.onload = function (){
                 ` <span>이미지${feed_image}</span><br>
                     <span>내용${content}</span><br>
                     <span>by ${user_id}</span><br>
-                    <span>♥${likes}개</span>`
+                    <span><a onclick="cancelLike(this.id)" id="${feed_no}">♥</a>${likes}개</span>`
                 );
             }
 
@@ -42,6 +42,7 @@ window.onload = function (){
 }
 
 // 좋아요 누르기
+// * 좋아요 수 증가시키기
 function checkLike(feed_no){
     $.ajax({
         url : '/v1/feedLike',
@@ -53,6 +54,25 @@ function checkLike(feed_no){
         })
     }).done(res => {
         console.log("좋아요 누름")
+        console.log(res);
+        // 새로고침
+        location.reload();
+    })
+}
+
+// 좋아요 취소하기
+// * 좋아요 수 감소시키기
+function cancelLike(feed_no){
+    $.ajax({
+        url : '/v1/feedLike',
+        method : 'delete',
+        contentType: 'application/json;charset=utf-8',
+        data : JSON.stringify({
+            "user_id" : `${user_id}`,
+            "feed_no" : `${feed_no}`
+        })
+    }).done(res => {
+        console.log("좋아요 취소");
         console.log(res);
         // 새로고침
         location.reload();

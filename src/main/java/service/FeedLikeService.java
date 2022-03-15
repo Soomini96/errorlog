@@ -5,6 +5,7 @@ import dto.FeedLikeDto;
 import java.util.Map;
 
 public interface FeedLikeService {
-    public boolean checkByIdAndNo(Map map);
-    public boolean checkLike(FeedLikeDto feedLikeDto);
+    public FeedLikeDto checkByIdAndNo(Map map);
+    public void checkLike(FeedLikeDto feedLikeDto);
+    public void cancelLike(FeedLikeDto feedLikeDto);
 }

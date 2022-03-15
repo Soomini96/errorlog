@@ -27,4 +27,9 @@ public class FeedLikeController {
     public void checkLike(@RequestBody FeedLikeDto feedLikeDto){
         feedLikeService.checkLike(feedLikeDto);
     }
+
+    @DeleteMapping("/v1/feedLike")
+    public void cancelLike(@RequestBody FeedLikeDto feedLikeDto){
+        feedLikeService.cancelLike(feedLikeDto);
+    }
 }

@@ -12,6 +12,10 @@
         INSERT INTO feed_like(user_id, feed_no) VALUES (#{user_id},#{feed_no});
     </insert>
 
+    <delete id="cancelLike" parameterType="feedLikeDto">
+        DELETE FROM feed_like WHERE user_id = #{user_id} AND feed_no = #{feed_no};
+    </delete>
+
     <resultMap type="dto.FeedLikeDto" id="fdl">
         <id column="no" property="no"/>
         <result column="user_id" property="user_id"/>
