@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     gap: 30px;
     place-content: center;
+    background:#fcfcfc;
 }
 
 .feed{

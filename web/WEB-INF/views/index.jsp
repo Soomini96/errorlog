@@ -15,6 +15,7 @@
 </head>
 <body class="index">
 <section>
+    <input type="hidden" name="logId" id="logId" value="<%=session.getAttribute("log") %>">
     <h1>ErrorLog</h1>
     <h2>로그인 후 서비스를 이용하실 수 있습니다.</h2>
     <form action="goLogin" method="post">

@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="css/allFeed.css">
 </head>
 <body>
+    <c:import url="../header.jsp" />
     <input type="hidden" name="logId" id="logId" value="<%=session.getAttribute("log") %>">
-    <h3>errorlog</h3>
     <table class="feed-wrap">
 
     </table>

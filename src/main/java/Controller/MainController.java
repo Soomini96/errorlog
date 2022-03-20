@@ -95,6 +95,13 @@ public class MainController {
     public String goLogin(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
         return memberRestController.goLogin(request, response);
     }
+
+    @GetMapping("/goLogout")
+    public String goLogout(HttpServletRequest request) throws IOException {
+        request.getSession().removeAttribute("log");
+        return "index";
+    }
+
     @GetMapping("/goMarkdown")
     public String goMarkdown(){
         return "user/markdown";
